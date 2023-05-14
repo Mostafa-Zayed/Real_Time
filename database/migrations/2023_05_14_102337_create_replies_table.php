@@ -20,7 +20,7 @@ class CreateRepliesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
             $table->softDeletes();
-            $table->foreign('question_id')->references('id')->on('quetions')->onDelete('cascade');
+            $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
         });
     }
 
